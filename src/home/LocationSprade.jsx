@@ -73,11 +73,8 @@ const LocationSprade = () => {
                     </div>
                 </div>
             </div>
-
-
         </div>
     )
 }
 
 export default LocationSprade
-gskjfdkkdgfl; kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
