@@ -119,7 +119,7 @@ const CategoryShowCase = () => {
                 </div>
                 {/* section body */}
                 <div className='section-wrapper'>
-                    <div className='row g-4 justify-content-center row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-col-1 course-filter'>{items.map((product) => <div key={product.id} className='col'>
+                    <div className='row g-4 justify-content-center row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 course-filter'>{items.map((product) => <div key={product.id} className='col'>
                         <div className='course-item style-4'>
                             <div className='course-inner'>
                                 <div className='course-thumb'>
