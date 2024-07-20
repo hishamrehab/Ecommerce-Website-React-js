@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-
-
+import image1 from "../../src/assets/images/clients/avater.jpg"
+import image2 from "../../src/assets/images/clients/avater.jpg"
+import image3 from "../../src/assets/images/clients/avater.jpg"
+import image4 from "../../src/assets/images/clients/avater.jpg"
+import image5 from "../../src/assets/images/clients/avater.jpg"
+import image6 from "../../src/assets/images/clients/avater.jpg"
+import image7 from "../../src/assets/images/clients/avater.jpg"
 
 const title = "More Then 60,000 Customers";
 
@@ -9,37 +14,37 @@ const desc = "Buy products on your any device with our app & enjoy your time wha
 
 const clientsList = [
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: image1,
         imgAlt: 'education thumb rajibraj91 rajibraj',
         text: 'Join with Us',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: image2,
         imgAlt: 'education thumb rajibraj91 rajibraj',
         text: 'Join with Us',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: image3,
         imgAlt: 'education thumb rajibraj91 rajibraj',
         text: 'Join with Us',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: image4,
         imgAlt: 'education thumb rajibraj91 rajibraj',
         text: 'Join with Us',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: image5,
         imgAlt: 'education thumb rajibraj91 rajibraj',
         text: 'Join with Us',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: image6,
         imgAlt: 'education thumb rajibraj91 rajibraj',
         text: 'Join with Us',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: image7,
         imgAlt: 'education thumb rajibraj91 rajibraj',
         text: 'Join with Us',
     },

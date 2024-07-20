@@ -4,4 +4,4 @@
 4- Utilizing Sass to make the style of our project.
 5- Utilizing popperjs and icofont.
 6- start to make the project functionality.
-7- Deploy the project on vercel.
+7- Deploy the project on Firebase.
