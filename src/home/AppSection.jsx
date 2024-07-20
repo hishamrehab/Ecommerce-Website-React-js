@@ -20,7 +20,6 @@ const AppSection = () => {
                     <ul className='lab-ul'>
                         <li><a href='#'><img src={image1} alt='' /></a></li>
                         <li><a href='#'><img src={image2} alt='' /></a></li>
-
                     </ul>
                 </div>
             </div>

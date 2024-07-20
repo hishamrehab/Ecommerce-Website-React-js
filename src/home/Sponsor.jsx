@@ -1,5 +1,11 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import image1 from "../../src/assets/images/sponsor/01.png"
+import image2 from "../../src/assets/images/sponsor/02.png"
+import image3 from "../../src/assets/images/sponsor/03.png"
+import image4 from "../../src/assets/images/sponsor/04.png"
+import image5 from "../../src/assets/images/sponsor/05.png"
+import image6 from "../../src/assets/images/sponsor/06.png"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,22 +19,22 @@ import { Autoplay } from 'swiper/modules';
 
 const sponsorList = [
     {
-        imgUrl: "/src/assets/images/sponsor/01.png",
+        imgUrl: image1,
     },
     {
-        imgUrl: "/src/assets/images/sponsor/02.png",
+        imgUrl: image2,
     },
     {
-        imgUrl: "/src/assets/images/sponsor/03.png",
+        imgUrl: image3,
     },
     {
-        imgUrl: "/src/assets/images/sponsor/04.png",
+        imgUrl: image4,
     },
     {
-        imgUrl: "/src/assets/images/sponsor/05.png",
+        imgUrl: image5,
     },
     {
-        imgUrl: "/src/assets/images/sponsor/06.png",
+        imgUrl: image6,
     },
 ];
 

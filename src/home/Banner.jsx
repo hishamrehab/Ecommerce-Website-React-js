@@ -64,7 +64,7 @@ const Banner = () => {
                                                 width: "80px",
                                                 height: "80px",
                                                 paddingLeft: "10px",
-                                                borderRadius: "5px"
+                                                borderRadius: "5px",
                                             }} />
                                         </Link>
                                     </li>
