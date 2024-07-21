@@ -31,10 +31,10 @@ const Shop = () => {
 
     const filterItem = (curcat) => {
         const newItem = Data.filter((newVal) => {
-            return newVal.category === curcat
+            return newVal.category === curcat;
         })
         setSelectedCategory(curcat);
-        setProducts(menuItems);
+        setProducts(newItem);
     }
 
 

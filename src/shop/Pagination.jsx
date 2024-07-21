@@ -11,7 +11,7 @@ const Pagination = ({ productsParPage, totalProducts, paginate, activePage }) =>
             <li>
                 <a href='#' onClick={() => {
                     if (activePage < pageNumbers.length) {
-                        paginate(activePage - 1)
+                        paginate(activePage - 1);
                     }
                 }}>
                     <i className='icofont-rounded-left'></i>

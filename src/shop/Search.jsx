@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Search = ({ products, GridList }) => {
     const [searchTerm, setSearchTerm] = useState("");
-    const filteredProducts = products.filter((product) => product.name.includes(searchTerm));
+    const filteredProducts = products.filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
     return (
         <div className='widget widget-search'>
@@ -35,4 +35,4 @@ const Search = ({ products, GridList }) => {
     )
 }
 
-export default Search
+export default Search 
