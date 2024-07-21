@@ -8,12 +8,15 @@ const ShopCategory = ({ filterItem, setItem, menuItems, setProducts, selectedCat
                     All Categories
                 </h5>
             </div>
-            <button onClick={() => setProducts(Data)} className={`m-2 ${selectedCategory === "All" ? "bg-warning" : ""}`}>All</button>
-            <div>{menuItems.map((val, id) => {
-                return (
-                    <button key={id} className={`m-2 ${selectedCategory === val ? "bg-warning" : ""}`} onClick={() => filterItem(val)}>{val}</button>
-                )
-            })}</div>
+            <div>
+
+                <button onClick={() => setProducts(Data)} className={`m-2 ${selectedCategory === "All" ? "bg-warning" : ""}`}>All</button>
+                {menuItems.map((val, id) => {
+                    return (
+                        <button key={id} className={`m-2 ${selectedCategory === val ? "bg-warning" : ""}`} onClick={() => filterItem(val)}>{val}</button>
+                    )
+                })}
+            </div>
         </>
     )
 }
