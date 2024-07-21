@@ -7,7 +7,7 @@ const NavItems = () => {
     const [headerFixed, setHeaderFixed] = useState(false);
     // addEvent Listener
     window.addEventListener("scroll", () => {
-        if (window.screenY > 200) {
+        if (window.scrollY > 200) {
             setHeaderFixed(true);
         } else {
             setHeaderFixed(false)
