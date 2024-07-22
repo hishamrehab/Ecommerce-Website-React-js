@@ -13,6 +13,8 @@ const tagsList = [
     { link: "#", text: "themeforest", },
     { link: "#", text: "codecanyon", }
 ];
+
+
 const Tags = () => {
     return (
         <div className='widget widget-tags'>
