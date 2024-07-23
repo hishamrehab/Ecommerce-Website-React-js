@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PageHeader from '../components/pageHeader';
 import { Link } from 'react-router-dom';
 import delImageUrl from "../assets/images/shop/del.png"
+import CheckOutPage from "./CheckOutPage"
 const CardPage = () => {
     const [cardItems, setCardItems] = useState([]);
 
@@ -109,6 +110,8 @@ const CardPage = () => {
 
                         </div>
                         {/* cart top ends */}
+
+
                         {/* card bottom */}
                         <div className='cart-bottom'>
                             {/* check out box */}
@@ -117,12 +120,14 @@ const CardPage = () => {
                                     <input className='card-page-input-text' type='text' name='coupon' id='coupon' placeholder='Coupon Code....' />
                                     <input type='submit' value={"Apply Coupon"} />
                                 </form>
-                                <form className='coupon'>
+                                <form className='cart-checkout'>
                                     <input type='submit' value="Update Card" />
-                                    <div>Checkout Page</div>
+                                    <div>
+                                        <CheckOutPage />
+                                    </div>
                                 </form>
                             </div>
-                            {/* checkOut box Ends  */}
+                            {/* checkOut box */}
                             <div className='shiping-box'>
                                 <div className='row'>
                                     <div className='col-md-6 col-12'>
@@ -186,7 +191,6 @@ const CardPage = () => {
                                 </div>
 
                             </div>
-
                             {/* shopping box */}
                         </div>
                     </div>
