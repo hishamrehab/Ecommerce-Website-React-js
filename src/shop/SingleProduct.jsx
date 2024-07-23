@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import PageHeader from '../components/pageHeader';
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import PopularPost from "./PopularPost"
+import Tags from "./Tags"
 // Import Swiper styles
 import "swiper/css";
 import { Autoplay } from "swiper/modules"
 import ProductDisplay from './ProductDisplay';
+import Review from './Review';
 
 
 const SingleProduct = () => {
@@ -78,11 +80,17 @@ const SingleProduct = () => {
                             </div>
                             {/* Review */}
                             <div className='review'>
-                                Review
+                                <Review />
                             </div>
                         </div>
                         {/* Right side */}
-                        <div className='col-lg-4 col-12'>Right Side</div>
+                        <div className='col-lg-4 col-12'>
+                            <aside className='ps-lg-4'>
+                                <PopularPost />
+                                <Tags />
+
+                            </aside>
+                        </div>
                     </div>
                 </div>
             </div>
