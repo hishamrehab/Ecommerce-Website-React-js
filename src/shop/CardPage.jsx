@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PageHeader from '../components/pageHeader';
 import { Link } from 'react-router-dom';
-
+import delImageUrl from "../assets/images/shop/del.png"
 const CardPage = () => {
     const [cardItems, setCardItems] = useState([]);
 
@@ -49,7 +49,6 @@ const CardPage = () => {
 
     // order total
     const orderTotal = cartSubTotal;
-
     return (
         <div>
             <PageHeader title={"Shop Cart"} curPage={"Cart Page"} />
@@ -66,7 +65,7 @@ const CardPage = () => {
                                         <th className='cat-price'>Price</th>
                                         <th className='cat-quantity'>Quantity</th>
                                         <th className='cat-toprice'>Total</th>
-                                        <th className='cat-edit'>Edit</th>
+                                        <th className='cat-edit'>delete</th>
                                     </tr>
                                 </thead>
                                 {/* table head */}
@@ -94,6 +93,14 @@ const CardPage = () => {
                                                         <div className='inc qtybutton' onClick={() => handleIncrease(item)}> + </div>
                                                     </div>
                                                 </td>
+                                                <td className='cat-toprice'>
+                                                    ${calculateTotalPrice(item)}
+                                                </td>
+                                                <td className='cat-edit'>
+                                                    <a href='#' onClick={() => handleRemoveItem(item)}>
+                                                        <img src={delImageUrl} alt='' />
+                                                    </a>
+                                                </td>
                                             </tr>
                                         ))
                                     }
@@ -102,6 +109,86 @@ const CardPage = () => {
 
                         </div>
                         {/* cart top ends */}
+                        {/* card bottom */}
+                        <div className='cart-bottom'>
+                            {/* check out box */}
+                            <div className='cart-checkout-box'>
+                                <form className='coupon'>
+                                    <input className='card-page-input-text' type='text' name='coupon' id='coupon' placeholder='Coupon Code....' />
+                                    <input type='submit' value={"Apply Coupon"} />
+                                </form>
+                                <form className='coupon'>
+                                    <input type='submit' value="Update Card" />
+                                    <div>Checkout Page</div>
+                                </form>
+                            </div>
+                            {/* checkOut box Ends  */}
+                            <div className='shiping-box'>
+                                <div className='row'>
+                                    <div className='col-md-6 col-12'>
+                                        <div className='calculate-shiping'>
+                                            <h3>Calculate Shiping</h3>
+                                            <div className='outline-select'>
+                                                <select>
+                                                    <option value="uk">United Kindom (Uk)</option>
+                                                    <option value="us">United States (USA)</option>
+                                                    <option value="bd">Bangladesh</option>
+                                                    <option value="pak">Pakistan</option>
+                                                    <option value="ind">India</option>
+                                                    <option value="np">Napal</option>
+                                                </select>
+                                                <span className='select-icon'>
+                                                    <i className='icofont-rounded-down'></i>
+                                                </span>
+                                            </div>
+
+                                            <div className='outline-select shipping-select'>
+                                                <select>
+                                                    <option value="uk">New York</option>
+                                                    <option value="us">London</option>
+                                                    <option value="bd">Dhaka</option>
+                                                    <option value="pak">Korachi</option>
+                                                    <option value="ind">New Delhi</option>
+
+                                                </select>
+                                                <span className='select-icon'>
+                                                    <i className='icofont-rounded-down'></i>
+                                                </span>
+                                            </div>
+                                            <input type='text' name='postalCode' id="postalCode" placeholder='postcode/ZIP*' className='cart-page-input-text' />
+                                            <button type='submit'>Update Address</button>
+
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-12'>
+                                        <div className='cart-overview'>
+                                            <h3>Cart Total</h3>
+                                            <ul className='lab-ul'>
+                                                <li>
+                                                    <span className='pul-left'>Cart Subtotal</span>
+                                                    <p className='pull-right'>$ {cartSubTotal}</p>
+                                                </li>
+
+                                                <li>
+                                                    <span className='pul-left'>Shipping and Handling</span>
+                                                    <p className='pull-right'>Free Shipping</p>
+                                                </li>
+
+                                                <li>
+                                                    <span className='pul-left'>Order Total</span>
+                                                    <p className='pull-right'>${orderTotal.toFixed(2)}</p>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            {/* shopping box */}
+                        </div>
                     </div>
                 </div>
             </div>

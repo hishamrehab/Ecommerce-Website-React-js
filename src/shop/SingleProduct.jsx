@@ -88,7 +88,6 @@ const SingleProduct = () => {
                             <aside className='ps-lg-4'>
                                 <PopularPost />
                                 <Tags />
-
                             </aside>
                         </div>
                     </div>
