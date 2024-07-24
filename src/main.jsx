@@ -24,6 +24,7 @@ import Shop from './shop/shop.jsx';
 import SingleProduct from './shop/singleProduct.jsx';
 import CardPage from './shop/CardPage.jsx';
 import SingleBlog from './blog/SingleBlog.jsx';
+import About from './about/About.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/cart-page",
         element: <CardPage />
+      },
+      {
+        path: "/about",
+        element: <About />
       },
     ]
   }]
