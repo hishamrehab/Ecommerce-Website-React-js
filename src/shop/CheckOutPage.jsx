@@ -3,8 +3,9 @@ import React from 'react'
 import { useState } from 'react'
 import { Modal } from 'react-bootstrap';
 import "../components/modal.css"
+import { useLocation, useNavigate } from 'react-router-dom';
 const CheckOutPage = () => {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
     const [activeTab, setActiveTab] = useState("visa");
 
     // Handle Tab Change
@@ -14,6 +15,18 @@ const CheckOutPage = () => {
 
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
+
+
+    // direct to home page
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || "/";
+
+    const handleOrderConfirm = () => {
+        alert("Your Order is placed successfully!");
+        localStorage.removeItem("cart");
+        navigate(from, { replace: true });
+    }
 
 
 
@@ -95,15 +108,15 @@ const CheckOutPage = () => {
                                                     </div>
                                                 </div>
                                                 <div className='px-5 pay'>
-                                                    <button className='btn btn-success btn-block'>Order</button>
+                                                    <button className='btn btn-success btn-block' onClick={handleOrderConfirm}>Order Now </button>
                                                 </div>
                                             </div>
 
                                         </div>
 
                                     </div>
-                                    {/* paypal content */}
 
+                                    {/* paypal content */}
 
                                     <div className={`tab-pane fade ${activeTab === "paypal" ? "show active" : ''}`}
                                         id='paypal'
@@ -125,15 +138,22 @@ const CheckOutPage = () => {
                                                     <input type='text' name='number' id='number' className='form-control' min="1" max="999" required />
                                                     <span>Your Name </span>
                                                 </div>
+
                                                 <div className='d-flex flex-row'>
+
                                                     <div className='inputbox'>
                                                         <input type='text' name='number' id='number' className='form-control' min="1" max="999" required />
-                                                        <span>Extra Ino</span>
+                                                        <span>Extra Info</span>
                                                     </div>
-
+                                                    <div className='inputbox'>
+                                                        <input type='text' name='number' id='number' className='form-control' min="1" max="999" required />
+                                                        <span></span>
+                                                    </div>
                                                 </div>
+
+
                                                 <div className='px-5 pay'>
-                                                    <button className='btn btn-success btn-block'>Add paypal</button>
+                                                    <button className='btn btn-success btn-block' onClick={handleOrderConfirm}>Add paypal</button>
                                                 </div>
                                             </div>
 
@@ -141,6 +161,9 @@ const CheckOutPage = () => {
                                     </div>
 
                                 </div>
+
+                                {/* payment desclimar */}
+                                <p className='mt-3 px-4 p-Disclaimer'><em>Payment Discliamer:</em> In event  shell payment or partial payment by Owner for any material or services</p>
                             </div>
                         </div>
                     </div>

@@ -72,7 +72,7 @@ const CardPage = () => {
                                 {/* table head */}
                                 <tbody>
                                     {
-                                        cardItems.map((item, index) => (
+                                        cardItems.length > 0 ? (cardItems.map((item, index) => (
                                             <tr key={index}>
                                                 <td className='product-item cat-product'>
                                                     <div className='p-thumb'>
@@ -103,7 +103,7 @@ const CardPage = () => {
                                                     </a>
                                                 </td>
                                             </tr>
-                                        ))
+                                        ))) : (<h2 className='py-3'>No Products in your cart  ...</h2>)
                                     }
                                 </tbody>
                             </table>
