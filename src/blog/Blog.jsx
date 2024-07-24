@@ -12,7 +12,6 @@ const Blog = () => {
                 <div className="container">
                     <div className='section-wrapper'>
                         <div className='row row-col-1 row-cols-md-2 row-cols-xl-3 justify-content-center g-4'>
-
                             {blogList.map((blog, i) => (
                                 <div key={i} className='cpl'>
                                     <div className='post-item'>
