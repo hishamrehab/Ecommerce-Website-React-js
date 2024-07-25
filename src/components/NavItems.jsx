@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from "../assets/images/logo/logo.png"
+import { AuthContext } from '../context/AuthProvider';
+
+
 const NavItems = () => {
     const [menuToggle, setMenuToggle] = useState(false);
     const [socialToggle, setSocialToggle] = useState(false);
     const [headerFixed, setHeaderFixed] = useState(false);
+
+    // authInfo
+    const { user } = useContext(AuthContext);
+
     // addEvent Listener
     window.addEventListener("scroll", () => {
         if (window.scrollY > 200) {
@@ -13,6 +20,7 @@ const NavItems = () => {
             setHeaderFixed(false)
         }
     })
+
     return (
         <header className={`header-section style-4 ${headerFixed ? "header-fixed fadeInUp" : ""}`}>
             {/* header top styles */}

@@ -26,6 +26,10 @@ import CardPage from './shop/CardPage.jsx';
 import SingleBlog from './blog/SingleBlog.jsx';
 import About from './about/About.jsx';
 import Contact from './contact/Contact.jsx';
+import AuthProvider from './context/AuthProvider.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+import Login from './components/Login.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,7 +59,9 @@ const router = createBrowserRouter([
 
       {
         path: "/cart-page",
-        element: <CardPage />
+        element: <PrivateRoute>
+          <CardPage />
+        </PrivateRoute>
       },
       {
         path: "/about",
@@ -65,10 +71,17 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />
       },
+      {
+        path: "/login",
+        element: <Login />
+      },
     ]
   }]
 );
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
-)
+  <AuthProvider>
+    <RouterProvider router={router} />
+  </AuthProvider>
+);
