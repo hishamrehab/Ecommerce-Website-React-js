@@ -1,50 +1,38 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
+import { createContext } from "react";
 import app from "../firebase/firebase.config"
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth"
-
-const googleProvider = new GoogleAuthProvider();
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 
 export const AuthContext = createContext();
-
 const auth = getAuth();
-
-// create user
-const createUser = (email, password) => {
-    setLoading(true);
-    return createUserWithEmailAndPassword(auth, email, password);
-}
-// create user using gmail
-const signUpWithGmail = () => {
-    setLoading(true);
-    return signInWithPopup(auth, googleProvider);
-}
-
-// login
-const login = (email, password) => {
-    setLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
-}
-
-// logout
-const logout = () => {
-    return signOut(auth);
-}
-
+const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const authInfo = {
-        user,
-        loading,
-        createUser,
-        signUpWithGmail,
-        login,
-        logout
+
+
+    const createUser = (email, password) => {
+        setLoading(true)
+        return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    //    create User using Gmail
+    const signUpWithGmail = () => {
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider);
+    }
 
-    // user is available or not
+    //    Login
+    const login = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+    // logOut
+    const logOut = () => {
+        return signOut(auth);
+    }
+    //   user is available or not
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
@@ -53,12 +41,24 @@ const AuthProvider = ({ children }) => {
         return () => {
             return unsubscribe();
         }
-    })
+    });
+
+
+    const authInfo = {
+        user,
+        loading,
+        createUser,
+        signUpWithGmail,
+        login,
+        logOut
+    }
+
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
         </AuthContext.Provider>
     )
+
 }
 
-export default AuthProvider
+export default AuthProvider;

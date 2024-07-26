@@ -103,7 +103,7 @@ const CardPage = () => {
                                                     </a>
                                                 </td>
                                             </tr>
-                                        ))) : (<h2 className='py-3'>No Products in your cart  ...</h2>)
+                                        ))) : (<h3 className='py-3 px-3'>No Products in your cart  ...</h3>)
                                     }
                                 </tbody>
                             </table>
