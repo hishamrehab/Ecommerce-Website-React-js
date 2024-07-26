@@ -20,7 +20,21 @@ const Login = () => {
     const from = location.state?.from?.pathname || "/";
 
     const handleLogin = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
 
+        login(email, password).then((result) => {
+            const user = result.user;
+            alert("Login successful");
+            navigate(from, { replace: true })
+        }).catch((error) => {
+            const errorMsg = error.message;
+            setErrorMessage("Please Provide Valid email and password");
+        })
+    }
+    const handleRegister = () => {
 
     }
 
@@ -30,11 +44,11 @@ const Login = () => {
                 <div className='container'>
                     <div className="account-wrapper">
                         <h3 className='title'>{title}</h3>
-                        <form action='account-form' onSubmit={handleLogin}>
-                            <div className='from-group'>
+                        <form className='account-form' onSubmit={handleLogin}>
+                            <div className='form-group'>
                                 <input type='email' name='email' id='email' placeholder='Email Address *' required />
                             </div>
-                            <div className='from-group'>
+                            <div className='form-group'>
                                 <input type='password' name='password' id='password' placeholder='Password *' required />
                             </div>
                             <div className='form-group'>
@@ -46,7 +60,7 @@ const Login = () => {
                                     <Link to="/forget" >Forget Password </Link>
                                 </div>
                             </div>
-                            <div className='from-group'>
+                            <div className='form-group'>
                                 <button type='submit' className='d-block lab-btn'>
                                     <span>{btnText}</span>
                                 </button>
@@ -56,8 +70,55 @@ const Login = () => {
 
                         {/* account button */}
                         <div className='account-bottom'>
-                            <span className='d-block cate pt-10'>Don't have an account ?<Link to="/sign-up">Sign Up</Link></span>
+                            <span className='d-block cate pt-10'>Don't have an account?<Link to="/sign-up">Sign Up</Link></span>
+                            <span className='or'>
+                                <span>Or</span>
+                            </span>
+
+                            {/* {social login} */}
+
+                            <h5 className='subtitle'>{socialTitle}</h5>
+                            <ul className='lab-ul social-icons justify-content-center'>
+                                <li>
+                                    <button className='github' onClick={handleRegister}>
+                                        <i className='icofont-github'></i>
+                                    </button>
+                                </li>
+
+                                <li>
+                                    <a href='/' className='facebook'>
+                                        <i className='icofont-facebook'></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a className='twitter'>
+                                        <i className='icofont-twitter'></i>
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a className='linkedin'>
+                                        <i className='icofont-linkedin'></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <button className='github'>
+                                        <i className='icofont-github'></i>
+                                    </button>
+                                </li>
+
+                                <li>
+                                    <a className='instagram'>
+                                        <i className='icofont-instagram'></i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
