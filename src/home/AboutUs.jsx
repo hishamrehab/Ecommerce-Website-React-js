@@ -6,7 +6,7 @@ const subTitle = "Why Choose Us";
 const title = "Become a Marchant";
 const desc = "Take courses on your any device with our app & learn all about business what you want. Just download & install & start to learn";
 const btnText = "Apply Now";
-import image from "../../src/assets/images/instructor/01.png"
+import image from "/images/instructor/01.png"
 
 const countList = [
     {

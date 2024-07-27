@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
-import logo from "../assets/images/logo/logo.png"
+import logo from "/images/logo/logo.png"
 import { AuthContext } from '../context/AuthProvider';
 
 
@@ -37,7 +37,6 @@ const NavItems = () => {
             <div className='header-bottom'>
                 <div className='container'>
                     <div className='header-wrapper'>
-
                         {/* logo */}
                         <div className='logo-search-acte'>
                             <div className='logo'>

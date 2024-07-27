@@ -1,16 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import image1 from "../../src/assets/images/blog/10.jpg"
-import image2 from "../../src/assets/images/blog/12.jpg"
-import image3 from "../../src/assets/images/blog/11.jpg"
-import image4 from "../../src/assets/images/blog/09.jpg"
+
 
 const title = "Most Popular Post";
 
-const postList = [{ id: 1, imgUrl: image1, imgAlt: 'rajibraj91', title: 'Poor People Campaign Our Resources', date: 'Jun 05,2022', },
-{ id: 2, imgUrl: image2, imgAlt: 'rajibraj91', title: 'Poor Peoples Campaign Our Resources', date: 'Jun 05,2022', },
-{ id: 3, imgUrl: image3, imgAlt: 'rajibraj91', title: 'Poor Peoples Campaign Our Resources', date: 'Jun 05,2022', },
-{ id: 4, imgUrl: image4, imgAlt: 'rajibraj91', title: 'Poor Peoples Campaign Our Resources', date: 'Jun 05,2022', }
+const postList = [{ id: 1, imgUrl: "/images/blog/10.jpg", imgAlt: 'rajibraj91', title: 'Poor People Campaign Our Resources', date: 'Jun 05,2022', },
+{ id: 2, imgUrl: "/images/blog/12.jpg", imgAlt: 'rajibraj91', title: 'Poor Peoples Campaign Our Resources', date: 'Jun 05,2022', },
+{ id: 3, imgUrl: "/images/blog/11.jpg", imgAlt: 'rajibraj91', title: 'Poor Peoples Campaign Our Resources', date: 'Jun 05,2022', },
+{ id: 4, imgUrl: "/images/blog/09.jpg", imgAlt: 'rajibraj91', title: 'Poor Peoples Campaign Our Resources', date: 'Jun 05,2022', }
 ]
 
 

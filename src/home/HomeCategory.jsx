@@ -1,11 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import image1 from "../../src/assets/images/category/01.jpg"
-import image2 from "../../src/assets/images/category/02.jpg"
-import image3 from "../../src/assets/images/category/03.jpg"
-import image4 from "../../src/assets/images/category/04.jpg"
-import image5 from "../../src/assets/images/category/05.jpg"
-import image6 from "../../src/assets/images/category/06.jpg"
 
 // **/_ Home Category _/**
 
@@ -15,37 +9,37 @@ const btnText = "Get Started Now";
 
 const categoryList = [
     {
-        imgUrl: image1,
+        imgUrl: "/images/category/01.jpg",
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'DSLR Camera',
     },
     {
-        imgUrl: image2,
+        imgUrl: "/images/category/02.jpg",
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Shoes',
     },
     {
-        imgUrl: image3,
+        imgUrl: "/images/category/03.jpg",
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Photography',
     },
     {
-        imgUrl: image4,
+        imgUrl: "/images/category/04.jpg",
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Formal Dress',
     },
     {
-        imgUrl: image5,
+        imgUrl: "/images/category/05.jpg",
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Colorful Bags',
     },
     {
-        imgUrl: image6,
+        imgUrl: "/images/category/06.jpg",
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Home Decor',

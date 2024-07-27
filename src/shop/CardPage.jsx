@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PageHeader from '../components/pageHeader';
 import { Link } from 'react-router-dom';
-import delImageUrl from "../assets/images/shop/del.png"
+import delImageUrl from "/images/shop/del.png"
 import CheckOutPage from "./CheckOutPage"
 const CardPage = () => {
     const [cardItems, setCardItems] = useState([]);

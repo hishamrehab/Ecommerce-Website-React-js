@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import image1 from "../../src/assets/images/app/01.jpg"
-import image2 from "../../src/assets/images/app/02.jpg"
+import image1 from "/images/app/01.jpg"
+import image2 from "/images/app/02.jpg"
 
 const btnText = "sign up for free";
 const title = "shop Anytime, Anywhere"

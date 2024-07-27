@@ -16,8 +16,6 @@ const SignUp = () => {
 
 
 
-
-
     const handleRegister = () => {
         signUpWithGmail().then((result) => {
             const user = result.user;
@@ -57,8 +55,6 @@ const SignUp = () => {
 
 
 
-
-
     return (
         <div className='login-section padding-tb section-bg'>
             <div className='container'>
@@ -73,7 +69,6 @@ const SignUp = () => {
                         <div className='form-group'>
                             <input type='email' name='email' id='email' placeholder='Email Address *' required />
                         </div>
-
 
 
 
@@ -154,7 +149,6 @@ const SignUp = () => {
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
