@@ -21,7 +21,7 @@ import {
 import Home from './home/Home.jsx';
 import Blog from './blog/Blog.jsx';
 import Shop from './shop/shop.jsx';
-import SingleProduct from './shop/singleProduct.jsx';
+import SingleProduct from "./shop/SingleProduct.jsx"
 import CardPage from './shop/CardPage.jsx';
 import SingleBlog from './blog/SingleBlog.jsx';
 import About from './about/About.jsx';

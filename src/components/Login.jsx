@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 const title = "Login";
 const socialTitle = "Login With Social Media";
 const btnText = "Login Now";
+
 const socialList = [
     { link: "#", iconName: "icofont-facebook", className: "facebook", },
     { link: "#", iconName: "icofont-twitter", className: "twitter", },

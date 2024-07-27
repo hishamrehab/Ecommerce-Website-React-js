@@ -4,6 +4,7 @@ import logo from "/images/logo/logo.png"
 import { AuthContext } from '../context/AuthProvider';
 
 
+
 const NavItems = () => {
     const [menuToggle, setMenuToggle] = useState(false);
     const [socialToggle, setSocialToggle] = useState(false);
@@ -11,7 +12,7 @@ const NavItems = () => {
 
     // authInfo
     const { user } = useContext(AuthContext);
-
+    console.log(user);
     // addEvent Listener
     window.addEventListener("scroll", () => {
         if (window.scrollY > 200) {
@@ -24,14 +25,18 @@ const NavItems = () => {
     return (
         <header className={`header-section style-4 ${headerFixed ? "header-fixed fadeInUp" : ""}`}>
             {/* header top styles */}
-            <div className={`header-top d-md-none ${socialToggle ? "open" : ""}`}>
-                <div className='container'>
-                    <div className='header-top-area'>
-                        <Link to="/signup" className='lab-btn me-3'><span>Create Account</span></Link>
-                        <Link to="/login">Log in</Link>
+            {!user && (
+                <div className={`header-top d-md-none ${socialToggle ? "open" : ""}`}>
+                    <div className='container'>
+                        <div className='header-top-area'>
+                            <Link to="/sign-up" className='lab-btn me-3'><span>Create Account</span></Link>
+                            <Link to="/login">Log in</Link>
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
+
+
 
             {/* header bottom */}
             <div className='header-bottom'>
@@ -61,9 +66,16 @@ const NavItems = () => {
 
                                 </ul>
                             </div>
+
+
                             {/* sign in & log in */}
-                            <Link to="/sign-up" className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
-                            <Link to="/login" className='d-none d-md-block'>Login</Link>
+                            {user ? user.email
+                                : (
+                                    <>   <Link to="/sign-up" className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
+                                        <Link to="/login" className='d-none d-md-block'>Login</Link>
+                                    </>
+                                )}
+
 
                             {/* menu-toggler */}
                             <div onClick={() => setMenuToggle(!menuToggle)} className={`header-bar d-lg-none ${menuToggle ? "active" : ""}`}>

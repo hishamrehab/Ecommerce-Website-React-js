@@ -14,6 +14,8 @@ import Review from './Review';
 const SingleProduct = () => {
     const [product, setProduct] = useState([]);
     const { id } = useParams();
+
+
     useEffect(() => {
         fetch("/src/products.json").then(res => res.json()).then(data => setProduct(data))
     }, []);
