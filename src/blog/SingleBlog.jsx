@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import blogList from '../utilis/blogdata';
+import blogList from '../../public/utilis/blogdata';
 import { useParams } from 'react-router-dom';
 import PageHeader from '../components/pageHeader';
 import Tags from '../shop/Tags';

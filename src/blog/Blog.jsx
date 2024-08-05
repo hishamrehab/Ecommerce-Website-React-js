@@ -1,7 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/pageHeader'
 
-import blogList from "../utilis/blogdata"
+import blogList from "../../public/utilis/blogdata"
 import { Link } from 'react-router-dom'
 
 const Blog = () => {
