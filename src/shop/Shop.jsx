@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PageHeader from '../components/pageHeader'
-import Data from "../../public/products.json"
+import Data from "../products.json"
 import ProductCard from './ProductCard';
 import Pagination from './Pagination';
 import Search from './Search';

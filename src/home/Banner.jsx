@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import productData from "../../public/products.json";
+import productData from "../../src/products.json";
 import { Link } from 'react-router-dom';
 import SelectedCategory from "../components/SelectedCategory"
 const title = (

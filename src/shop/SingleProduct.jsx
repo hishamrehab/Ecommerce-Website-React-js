@@ -9,18 +9,20 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules"
 import ProductDisplay from './ProductDisplay';
 import Review from './Review';
-
+import data from "../products.json"
 
 const SingleProduct = () => {
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState({});
     const { id } = useParams();
 
-
     useEffect(() => {
-        fetch("/src/products.json").then(res => res.json()).then(data => setProduct(data))
+        const selectedProduct = data.find((item) => {
+            return item.id === id;
+        })
+        setProduct(selectedProduct);
     }, []);
 
-    const result = product.filter((product) => product.id === id);
+
 
     return (
         <div>
@@ -52,14 +54,14 @@ const SingleProduct = () => {
                                                     }
                                                     className="mySwiper">
 
-                                                    {result.map((item, i) => (
-                                                        <SwiperSlide key={i}>
-                                                            <div className='single-thumb'>
-                                                                <img src={item.img} alt='' />
-                                                            </div>
-                                                        </SwiperSlide>
-                                                    )
-                                                    )}
+
+                                                    <SwiperSlide>
+                                                        <div className='single-thumb'>
+                                                            <img src={product.img} alt='' />
+                                                        </div>
+                                                    </SwiperSlide>
+
+
                                                 </Swiper>
                                                 <div className='pro-single-prev'>
                                                     <i className='icofont-rounded-right'></i>
@@ -73,9 +75,7 @@ const SingleProduct = () => {
 
                                     <div className='col-md-6 col-12'>
                                         <div className='post-content'>
-                                            {
-                                                result.map(item => <ProductDisplay key={item.id} item={item} />)
-                                            }
+                                            <ProductDisplay key={product.id} item={product} />
                                         </div>
                                     </div>
                                 </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Rating from "../components/Rating"
+
 const ProductCard = ({ GridList, products }) => {
     return (
         <div className={`shop-product-wrap row justify-content-center ${GridList ? "grid" : "list"}`}>

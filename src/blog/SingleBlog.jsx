@@ -8,7 +8,6 @@ import PopularPost from '../shop/PopularPost';
 const SingleBlog = () => {
     const [blog, setBlog] = useState(blogList);
     const { id } = useParams();
-
     const result = blog.filter((b) => b.id === Number(id));
 
     const socialList = [
