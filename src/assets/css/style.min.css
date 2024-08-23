@@ -5982,7 +5982,6 @@ button {
   }
 }
 .banner-section.style-2 {
-
   background-image: url(../../../public/images/bg-img/02.jpg);
   padding-top: 175px;
 }
@@ -6364,7 +6363,7 @@ button {
 }
 .category-section.style-2 .section-wrapper .col .category-item .category-inner {
   /*  ../../assets/images/category/bg/01.jpg */
-  background: url(../../../../public/images/category/bg/01.jpg) no-repeat;
+  background: url(../../../public/images/category/bg/01.jpg) no-repeat;
   background-size: cover !important;
 }
 .category-section.style-2
@@ -6397,49 +6396,49 @@ button {
   .col:nth-of-type(8n + 2)
   .category-item
   .category-inner {
-  background: url(../../../../public/images/category/02.jpg) no-repeat;
+  background: url(../../../public/images/category/02.jpg) no-repeat;
 }
 .category-section.style-2
   .section-wrapper
   .col:nth-of-type(8n + 3)
   .category-item
   .category-inner {
-  background: url(../../../../public/images/category/bg/03.jpg) no-repeat;
+  background: url(../../../public/images/category/bg/03.jpg) no-repeat;
 }
 .category-section.style-2
   .section-wrapper
   .col:nth-of-type(8n + 4)
   .category-item
   .category-inner {
-  background: url(../../../../public/images/category/04.jpg) no-repeat;
+  background: url(../../../public/images/category/04.jpg) no-repeat;
 }
 .category-section.style-2
   .section-wrapper
   .col:nth-of-type(8n + 5)
   .category-item
   .category-inner {
-  background: url(../../../../public/images/category/05.jpg) no-repeat;
+  background: url(../../../public/images/category/05.jpg) no-repeat;
 }
 .category-section.style-2
   .section-wrapper
   .col:nth-of-type(8n + 6)
   .category-item
   .category-inner {
-  background: url(../../../../public/images/category/bg/06.jpg) no-repeat;
+  background: url(../../../public/images/category/bg/06.jpg) no-repeat;
 }
 .category-section.style-2
   .section-wrapper
   .col:nth-of-type(8n + 7)
   .category-item
   .category-inner {
-  background: url(../../../../public/images/category/bg/07.jpg) no-repeat;
+  background: url(../../../public/images/category/bg/07.jpg) no-repeat;
 }
 .category-section.style-2
   .section-wrapper
   .col:nth-of-type(8n + 8)
   .category-item
   .category-inner {
-  background: url(../../../../public/images/category/bg/08.jpg) no-repeat;
+  background: url(../../../public/images/category/bg/08.jpg) no-repeat;
 }
 @media (min-width: 992px) {
   .category-section.style-3 .section-header {
@@ -6594,7 +6593,7 @@ button {
   }
 }
 .course-section.style-3 {
-  background: url(../../../../public/images/shape-img/01.jpg) no-repeat;
+  background: url(../../../public/images/shape-img/01.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -6695,7 +6694,7 @@ button {
   margin: 30px 0;
 }
 .video-section {
-  background: url(../../../../public/images/bg-img/10.jpg) no-repeat;
+  background: url(../../../public/images/bg-img/10.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -6911,7 +6910,7 @@ button {
   font-weight: 700;
 }
 .contact-info-section {
-  background: url(../../../../public/images/bg-img/11.jpg) no-repeat;
+  background: url(../../../public/images/bg-img/11.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -7006,7 +7005,7 @@ button {
   font-weight: 400;
 }
 .offer-section {
-  background: url(../../../../public/images/bg-img/12.jpg) no-repeat;
+  background: url(../../../public/images/bg-img/12.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -7594,7 +7593,7 @@ button {
 .event-section::after {
   top: 0;
   left: 0;
-  background: url(../../../../public/images/shape-img/08.png) no-repeat;
+  background: url(../../../public/images/shape-img/08.png) no-repeat;
   background-position: center;
   background-size: 115% 30%;
 }
@@ -7709,7 +7708,7 @@ button {
 .newsletters-section::after {
   bottom: 0;
   left: 0;
-  background: url(../../../../public/images/shape-img/06.png) no-repeat;
+  background: url(../../../public/images/shape-img/06.png) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -7814,7 +7813,7 @@ button {
 .feature-section::after {
   bottom: 0;
   left: 0;
-  background: url(../../../../public/images/shape-img/07.png) no-repeat;
+  background: url(../../../public/images/shape-img/07.png) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -7960,7 +7959,7 @@ button {
   border-radius: 4px;
 }
 .clients-section {
-  background: url(../../../../public/images/bg-img/05.jpg) no-repeat;
+  background: url(../../../public/images/bg-img/05.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -7978,7 +7977,7 @@ button {
 }
 .clients-section.style-2 .section-wrapper {
   height: 400px;
-  background: url(../../../../public/images/clients/bg.png) no-repeat;
+  background: url(../../../public/images/clients/bg.png) no-repeat;
   background-position: center;
   background-size: 75% 100%;
 }
@@ -8350,7 +8349,8 @@ button {
   right: -50px;
 }
 .register-section {
-  background: url(../../../../public/images/bg-img/07.jpg) no-repeat;
+  /* ../../../../public/images/bg-img/07.jpg */
+  background: url(../../../public/images/bg-img/07.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -8457,7 +8457,7 @@ button {
   top: 60%;
   width: 85%;
   height: 60%;
-  background-image: url(../../../public/images/shape-img/10.png);
+  background-image: url(../../../../public/images/shape-img/10.png);
   background-repeat: no-repeat;
   transform: translateY(-50%);
   background-size: 70%;
@@ -8484,7 +8484,7 @@ button {
   }
 }
 .achievement-section {
-  background: url(../../../../public/images/shape-img/02.png) no-repeat;
+  background: url(../../../public/images/shape-img/02.png) no-repeat;
   background-position: center;
 }
 .achievement-section .section-header {
@@ -8513,7 +8513,7 @@ button {
 }
 @media (min-width: 992px) {
   .achievement-section.style-3 {
-    background: url(../../../../public/images/shape-img/05.png) no-repeat;
+    background: url(../../../public/images/shape-img/05.png) no-repeat;
     background-size: 100% 100%;
     background-position: center;
   }
