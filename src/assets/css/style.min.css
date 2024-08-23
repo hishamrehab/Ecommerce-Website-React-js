@@ -3720,7 +3720,8 @@ button {
 .shape-img::after {
   width: 100%;
   height: 100%;
-  background: url(../../../../public/images/shape-img/01.jpg);
+  /* ../../../../public/images/shape-img/01.jpg */
+  background: url(../../../public/images/shape-img/01.jpg);
   z-index: -1;
   background-position: center;
   background-repeat: no-repeat;
@@ -5981,7 +5982,8 @@ button {
   }
 }
 .banner-section.style-2 {
-  background-image: url(../../../../public/images/bg-img/02.jpg);
+
+  background-image: url(../../../public/images/bg-img/02.jpg);
   padding-top: 175px;
 }
 .banner-section.style-2::before {
@@ -6008,7 +6010,7 @@ button {
   animation: bounce-1 5s infinite linear;
 }
 .banner-section.style-3 {
-  background-image: url(../../../../public/images/bg-img/03.jpg);
+  background-image: url(../../../public/images/bg-img/03.jpg);
   background-position: left;
   padding: 170px 0;
   margin-top: 98px;
@@ -6024,7 +6026,7 @@ button {
   padding: 18px 40px;
 }
 .banner-section.style-4 {
-  background-image: url(../../../../public/images/bg-img/06.jpg);
+  background-image: url(../../../public/images/bg-img/06.jpg);
   z-index: 1;
   padding-bottom: 100px;
 }
@@ -6120,7 +6122,7 @@ button {
   font-size: 22px;
 }
 .banner-section.style-5 {
-  background-image: url(../../../../public/images/bg-img/08.jpg);
+  background-image: url(../../../public/images/bg-img/08.jpg);
   background-position: center;
   background-attachment: fixed;
   padding: 260px 0 200px;
@@ -6168,7 +6170,7 @@ button {
   box-shadow: 0 5px 10px rgba(16, 17, 21, 0.5);
 }
 .banner-section.style-6 {
-  background-image: url(../../../../public/images/bg-img/09.jpg);
+  background-image: url(../../../public/images/bg-img/09.jpg);
   background-position: center;
   background-attachment: fixed;
   padding: 286px 0 200px;
@@ -6187,7 +6189,7 @@ button {
   font-size: 1.25rem;
 }
 .banner-section.style-7 {
-  background-image: url(../../../../public/images/bg-img/14.jpg);
+  background-image: url(../../../public/images/bg-img/14.jpg);
   background-size: cover;
   background-position: right;
   margin-top: 98px;
@@ -6230,7 +6232,7 @@ button {
 }
 .pageheader-section {
   padding: 250px 0 100px;
-  background-image: url(../../../../public/images/pageheader/bg/01.jpg);
+  background-image: url(../../../public/images/pageheader/bg/01.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -6241,7 +6243,7 @@ button {
 .pageheader-section.style-2 {
   padding-top: 250px;
 
-  background-image: url(../../../../public/images/pageheader/bg/02.jpg);
+  background-image: url(../../../public/images/pageheader/bg/02.jpg);
 }
 @media (max-width: 991px) {
   .pageheader-section.style-2 {
@@ -7642,7 +7644,7 @@ button {
   border-radius: 10px;
 }
 .workshop-section {
-  background-image: url(../../../../public/images/bg-img/04.jpg);
+  background-image: url(../../../public/images/bg-img/04.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -7781,7 +7783,7 @@ button {
   margin-bottom: 30px;
 }
 .newsletters-section.style-2 {
-  background-image: url(../../../../public/images/bg-img/13.jpg);
+  background-image: url(../../../public/images/bg-img/13.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -8455,7 +8457,7 @@ button {
   top: 60%;
   width: 85%;
   height: 60%;
-  background-image: url(../../../../public/images/shape-img/10.png);
+  background-image: url(../../../public/images/shape-img/10.png);
   background-repeat: no-repeat;
   transform: translateY(-50%);
   background-size: 70%;
