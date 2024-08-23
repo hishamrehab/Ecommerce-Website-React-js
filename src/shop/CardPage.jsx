@@ -13,7 +13,6 @@ const CardPage = () => {
         setCardItems(storedCardItems);
     }, [])
 
-    console.log(cardItems);
     // calculate prices
     const calculateTotalPrice = (item) => (item.price * item.quantity)
     const handleIncrease = (item) => {
